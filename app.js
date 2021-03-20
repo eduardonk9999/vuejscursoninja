@@ -4,7 +4,9 @@
        title: 'The Final Empire',
        age: '29',
        showBooks: true,
-       text: 'Lord of Rings'
+       text: 'Lord of Rings',
+       x: 0,
+       y: 0
      }
    },
    methods: {
@@ -14,6 +16,13 @@
      },
      toggleShowBooks() {
        this.showBooks = !this.showBooks
+     },
+     handleEvent() {
+       console.log('event')
+     },
+     handleMousemove(e) {
+      this.x = e.offsetX
+      this.y = e.offsetY
      }
    }
  })
